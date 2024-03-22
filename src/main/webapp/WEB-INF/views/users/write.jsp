@@ -78,7 +78,7 @@
   <script>
   	const  goListEl  = document.getElementById('goList');
   	goListEl.addEventListener('click', function(e) {
-  		location.href = '/Menus/List';
+  		location.href = '/Users/List';
   	})
   
   </script>
