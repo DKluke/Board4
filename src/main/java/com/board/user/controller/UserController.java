@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.method.annotation.ModelAndViewResolverMethodReturnValueHandler;
 
 import com.board.user.domain.UserVo;
 import com.board.user.mapper.UserMapper;
@@ -104,6 +105,16 @@ public class UserController {
 	@RequestMapping("/Update")
 	public ModelAndView update(UserVo userVo) {
 		userMapper.updateUser(userVo);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		
+		return mv;
+	}
+	
+	@RequestMapping("/Delete")
+	public ModelAndView delete(UserVo userVo) {
+		userMapper.deleteUser(userVo);
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("redirect:/Users/List");
