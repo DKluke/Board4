@@ -16,6 +16,8 @@ public interface UserMapper {
 
 	HashMap<String,Object> getUser(UserVo userVo);
 
-	HashMap<String,Object> updateUser(UserVo userVo);
+	void updateUser(UserVo userVo);
+
+
 
 }

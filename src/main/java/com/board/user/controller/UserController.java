@@ -103,6 +103,11 @@ public class UserController {
 	
 	@RequestMapping("/Update")
 	public ModelAndView update(UserVo userVo) {
-
+		userMapper.updateUser(userVo);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		
+		return mv;
 	}
 }

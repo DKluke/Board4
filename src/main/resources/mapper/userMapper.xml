@@ -57,6 +57,16 @@
   	WHERE 		USERID=#{userid}
   </select>
   
+  <update id="updateUser">
+  	UPDATE TUSER
+  	SET
+  		PASSWD=#{passwd},
+  		USERNAME=#{username},
+  		EMAIL=#{email}  	
+  	WHERE USERID=#{userid}
+  	
+  </update>
+
   
 </mapper>
 
