@@ -104,6 +104,7 @@ public class UserController {
 	
 	@RequestMapping("/Update")
 	public ModelAndView update(UserVo userVo) {
+		
 		userMapper.updateUser(userVo);
 		
 		ModelAndView mv = new ModelAndView();
@@ -113,7 +114,8 @@ public class UserController {
 	}
 	
 	@RequestMapping("/Delete")
-	public ModelAndView delete(UserVo userVo) {
+	public ModelAndView delete(UserVo userVo) {		
+		
 		userMapper.deleteUser(userVo);
 		
 		ModelAndView mv = new ModelAndView();
